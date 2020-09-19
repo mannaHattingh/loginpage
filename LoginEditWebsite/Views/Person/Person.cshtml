@@ -1,0 +1,33 @@
+﻿@model LoginEditWebsite.ViewModels.PersonListViewModel 
+@{
+    ViewData["Title"] = "Person Information";
+}
+
+<div>
+    <table class="table table-light table-striped">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Surname</td>
+                <td>Password</td>
+                <td>Last Login</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Person)
+            {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.Password</td>
+                <td>@item.LastLogin</td>
+                <td>
+                    <button class="btn btn-success btn-sm">Edit</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
